@@ -55,7 +55,7 @@ a {
 .hero {
   position: relative;
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1602526218853-6f6c81b2b5c4?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1549921296-3a6b69f9c7ae?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,11 +65,9 @@ a {
 .hero::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.65);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.65);
   z-index: 1;
 }
 
@@ -97,9 +95,9 @@ a {
 
 .gradient-text {
   background: linear-gradient(90deg, #00fff7, #ff00c8);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   color: transparent;
 }
 
@@ -126,6 +124,7 @@ section {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 3rem;
+  color: #00fff7;
 }
 
 .service-cards {
