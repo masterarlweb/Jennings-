@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jennings</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a2d2706f4d.js" crossorigin="anonymous"></script>
   <style>
     * {
-      margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
-
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #111;
       color: #eee;
     }
-
     a {
       text-decoration: none;
       color: inherit;
@@ -61,7 +62,7 @@
     .hero {
       position: relative;
       height: 100vh;
-      background: url('https://images.unsplash.com/photo-1526178612545-4d8ecf77b99f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1526178611151-54e4bba3760c?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -73,7 +74,7 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0,0,0,0.65);
+      background: rgba(0,0,0,0.6);
       z-index: 1;
     }
 
@@ -84,17 +85,26 @@
       padding: 2rem;
     }
 
-    .hero h2 { font-size: 1.6rem; color: #ccc; }
-    .hero h1 { font-size: 3rem; margin: 0.5rem 0; }
-    .hero p { font-size: 1.2rem; color: #aaa; margin-bottom: 2rem; }
+    .hero h1 {
+      font-size: 3rem;
+      margin: 1rem 0;
+    }
 
     .gradient-text {
       background: linear-gradient(90deg, #00fff7, #ff00c8);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
     }
 
     .btn {
+      margin-top: 2rem;
       background: #00fff7;
       color: #000;
       padding: 0.8rem 1.5rem;
@@ -107,6 +117,7 @@
     .btn:hover {
       background: #ff00c8;
       color: #fff;
+      transform: scale(1.05);
     }
 
     section {
@@ -117,6 +128,7 @@
       font-size: 2.5rem;
       text-align: center;
       margin-bottom: 3rem;
+      color: #00fff7;
     }
 
     .service-cards {
@@ -138,45 +150,44 @@
       background: rgba(0, 255, 247, 0.1);
     }
 
-    .card h3 { color: #00fff7; margin-bottom: 0.5rem; }
+    .card h3 {
+      color: #00fff7;
+      margin-bottom: 0.5rem;
+    }
 
     .portfolio {
       background-color: #1a1a1a;
     }
 
-    .contact {
-      background-color: #000;
+    .portfolio-note {
       text-align: center;
-    }
-
-    .contact-icons {
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
       margin-top: 2rem;
-    }
-
-    .contact-icons a {
-      font-size: 2rem;
-      color: #00fff7;
-      transition: transform 0.3s, color 0.3s;
-    }
-
-    .contact-icons a:hover {
-      transform: scale(1.2);
       color: #ff00c8;
-    }
-
-    .contact p {
-      margin-top: 1rem;
-      font-size: 1.1rem;
     }
 
     footer {
       padding: 2rem;
       text-align: center;
       background-color: #000;
-      color: #666;
+      color: #aaa;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .social-icons a {
+      color: #00fff7;
+      font-size: 1.8rem;
+      transition: transform 0.3s ease, color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ff00c8;
+      transform: translateY(-5px);
     }
 
     @media (max-width: 600px) {
@@ -194,8 +205,10 @@
   </style>
 </head>
 <body>
+
+  <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">Jennings</div>
+    <div class="logo"><span class="highlight">Jennings</span></div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#services">Layanan</a></li>
@@ -204,49 +217,53 @@
     </ul>
   </nav>
 
-  <header class="hero" id="home">
+  <!-- Hero Section -->
+  <section class="hero" id="home">
     <div class="hero-content">
       <h2>Selamat Datang di</h2>
       <h1 class="gradient-text">Jennings</h1>
       <p>Tampilkan Brand Anda dengan Cara yang Lebih Menarik dan Berkesan!</p>
-      <a href="#services" class="btn">Lihat Layanan Kami</a>
+      <a href="#services" class="btn">Lihat Layanan</a>
     </div>
-  </header>
+  </section>
 
+  <!-- Services -->
   <section id="services">
-    <div class="section-title">Layanan Kami</div>
+    <h2 class="section-title">Layanan Kami</h2>
     <div class="service-cards">
-      <div class="card"><h3>Content Video</h3><p>Pembuatan konten video menarik untuk berbagai keperluan.</p></div>
-      <div class="card"><h3>Logo Design</h3><p>Desain logo unik untuk identitas brand kamu.</p></div>
-      <div class="card"><h3>Promosi Video</h3><p>Video promosi yang mampu meningkatkan daya tarik produk.</p></div>
-      <div class="card"><h3>Banner</h3><p>Desain banner visual untuk kebutuhan promosi online/offline.</p></div>
-      <div class="card"><h3>Cinematography</h3><p>Visual storytelling dengan kualitas sinematik profesional.</p></div>
-      <div class="card"><h3>Videography</h3><p>Video dokumentasi event, produk, hingga behind the scene.</p></div>
+      <div class="card"><h3>Videography</h3><p>Video profesional untuk kebutuhan promosi dan dokumentasi.</p></div>
+      <div class="card"><h3>Photography</h3><p>Foto produk, event, dan lifestyle dengan kualitas maksimal.</p></div>
+      <div class="card"><h3>Content Creation</h3><p>Kreasi konten visual yang menarik untuk media sosial dan digital.</p></div>
+      <div class="card"><h3>Logo & Banner</h3><p>Desain identitas visual seperti logo, banner, dan branding lainnya.</p></div>
     </div>
   </section>
 
+  <!-- Portfolio -->
   <section class="portfolio" id="portfolio">
-    <div class="section-title">Portfolio</div>
+    <h2 class="section-title">Portfolio</h2>
     <div class="service-cards">
-      <div class="card"><h3>Brand Video</h3><p>Contoh video promosi dan pengenalan produk.</p></div>
-      <div class="card"><h3>Event Coverage</h3><p>Dokumentasi event seperti seminar dan pernikahan.</p></div>
-      <div class="card"><h3>Social Media</h3><p>Konten reels, TikTok, dan YouTube dengan kualitas tinggi.</p></div>
+      <div class="card"><h3>Brand Video</h3><p>Cuplikan hasil video promosi terbaik dari tim kami.</p></div>
+      <div class="card"><h3>Event Coverage</h3><p>Dokumentasi acara perusahaan hingga momen spesial pribadi.</p></div>
+      <div class="card"><h3>Social Media</h3><p>Konten Instagram, TikTok, dan YouTube berkualitas tinggi.</p></div>
     </div>
-    <p style="text-align:center; margin-top:2rem;">Ingin melihat hasil portofolio kami? Kunjungi Instagram: <strong>@masterarol_cc</strong></p>
+    <div class="portfolio-note">
+      Lihat hasil portofolio konten kami di Instagram:<br/>
+      <strong>@masterarol_cc</strong>
+    </div>
   </section>
 
-  <section class="contact" id="contact">
-    <div class="section-title">Hubungi Kami</div>
-    <div class="contact-icons">
+  <!-- Contact / Footer -->
+  <footer id="contact">
+    <h2 class="section-title">Hubungi Kami</h2>
+    <div class="social-icons">
       <a href="https://wa.me/6281336135036" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       <a href="https://instagram.com/masterarol_cc" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
     </div>
-    <p>WhatsApp: +62 813-3613-5036</p>
-    <p>Instagram: @masterarol_cc</p>
-  </section>
-
-  <footer>
+    <p>Instagram: <strong>@masterarol_cc</strong></p>
+    <p>WhatsApp: <strong>+62 813-3613-5036</strong></p>
+    <br>
     <p>&copy; 2025 Jennings. All rights reserved.</p>
   </footer>
+
 </body>
 </html>

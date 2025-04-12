@@ -55,7 +55,7 @@ a {
 .hero {
   position: relative;
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1526178612545-4d8ecf77b99f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1549921296-3a6b1c3c3843') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,13 +79,14 @@ a {
 }
 
 .hero h2 {
-  font-size: 1.6rem;
-  color: #ccc;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .hero h1 {
   font-size: 3rem;
   margin: 0.5rem 0;
+  font-weight: 700;
 }
 
 .hero p {
@@ -96,8 +97,10 @@ a {
 
 .gradient-text {
   background: linear-gradient(90deg, #00fff7, #ff00c8);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .btn {
@@ -149,36 +152,27 @@ section {
   margin-bottom: 0.5rem;
 }
 
-.portfolio {
+.portfolio,
+.contact {
   background-color: #1a1a1a;
 }
 
-.contact {
-  background-color: #000;
-  text-align: center;
-}
-
-.contact-icons {
+.social-links {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   margin-top: 2rem;
 }
 
-.contact-icons a {
+.social-icon {
   font-size: 2rem;
   color: #00fff7;
-  transition: transform 0.3s, color 0.3s;
+  transition: transform 0.3s ease, color 0.3s;
 }
 
-.contact-icons a:hover {
+.social-icon:hover {
   transform: scale(1.2);
   color: #ff00c8;
-}
-
-.contact p {
-  margin-top: 1rem;
-  font-size: 1.1rem;
 }
 
 footer {
@@ -186,6 +180,14 @@ footer {
   text-align: center;
   background-color: #000;
   color: #666;
+  font-size: 0.9rem;
+}
+
+.portfolio-caption {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #ccc;
 }
 
 @media (max-width: 600px) {
@@ -204,3 +206,4 @@ footer {
     align-items: flex-start;
   }
 }
+
